@@ -29,7 +29,7 @@ function updatePicture() {
         page = 1;
         updatePicture();
     } else {
-        document.getElementById("cardview-document").style.backgroundImage = "url('CardView/pages/" + page + ".png";
+        document.getElementById("cardview-document").style.backgroundImage = "url('CardView/pages/" + page + fileExtention;
     }
     document.getElementById("page-label").innerHTML = "Page " + page;
 }
