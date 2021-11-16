@@ -57,6 +57,7 @@
   border: 8px;
   padding: 8px;
   border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
