@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500') .cardview-container-loading {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500')
+.cardview-container-loading {
   width: 80%;
   height: 50%;
   background-repeat: no-repeat;
@@ -40,7 +41,6 @@
 .cardview-btn {
   margin: auto;
   background-color: white;
-  /* Green */
   border: none;
   color: black;
   padding: 15px 32px;
