@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CardView</title>
+        <link rel="icon" href="icon.png">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@200&family=Ubuntu:wght@300&display=swap');
+            body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image:url('backdrop.jpg');
+  font-family: 'Open Sans',Arial, Helvetica;
+  letter-spacing: 0.02em;
+   font-weight: 400;
+   color: black !important;
+ }
+ 
+ .blurred-box{
+    color: black !important;
+   position: relative;
+   width: 250px;
+   height: 350px;
+   top: calc(50% - 175px);
+   left: calc(50% - 125px);
+   background: inherit;
+   border-radius: 2px;
+   overflow: hidden;
+   
+ }
+ 
+ .blurred-box:after{
+    color: black;
+  content: '';
+  width: 300px;
+  height: 300px;
+  background: inherit; 
+  position: absolute;
+  left: -25px;
+  left: position;
+  right: 0;
+  top: -25px;  
+  top: position; 
+  bottom: 0;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+ }
+ .greeting-box{
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  z-index: 1;
+  margin-top: 15px;
+   margin-bottom: 15px;
+   color: black !important;
+   font-family: 'Open Sans', sans-serif;
+}
+span {
+    color:black;
+}
+.centered-all-directions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered {
+    text-align: center;
+}
+.cardview-container-loading {
+    width: 80%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('CardView.png');
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+}
+.cardview-container {
+    width: 60%;
+    margin: auto;
+    
+}
+.cardview-document {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image:url('CardView/title.png');
+    width: 80%;
+    height: 50%;
+    margin: auto;
+}
+.cardview-menubar {
+    padding-top: 1%;
+    display: flex;
+    margin: auto;
+}
+.cardview-btn {
+    margin: auto;
+    background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+}
+.page-label {
+    background-color: white;
+    border: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+/* for printing */
+@media print {
+
+}
+@media only screen and (max-width: 600px) {
+    .cardview-document {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image:url('CardView/title.png');
+        width: 100%;
+        height: 20%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .cardview-document {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image:url('CardView/title.png');
+        width: 100%;
+        height: 20%;
+        margin: auto;
+    }
+}
+        </style>
+        
+        <script>
+            function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie =
+    name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+function homescreen() {
+    document.body.innerHTML = '<h1 class="centered">CardView</h1><div class="cardview-container" id="cardview-container"><div id="cardview-container-loading" class="cardview-container-loading"></div><div class="svg-loader-container" id="svg-loader-container"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;" width="10%" height="10%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="15" y="24.5" width="20" height="51" fill="#000"><animate attributeName="y" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="-1;24.5;24.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.20408163265306123s"></animate><animate attributeName="height" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="102;51;51" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.20408163265306123s"></animate></rect><rect x="40" y="24.5" width="20" height="51" fill="#000"><animate attributeName="y" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="5.375;24.5;24.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.10204081632653061s"></animate><animate attributeName="height" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="89.25;51;51" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.10204081632653061s"></animate></rect><rect x="65" y="24.5" width="20" height="51" fill="#000"><animate attributeName="y" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="5.375;24.5;24.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate><animate attributeName="height" repeatCount="indefinite" dur="1.0204081632653061s" calcMode="spline" keyTimes="0;0.5;1" values="89.25;51;51" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate></rect></svg></div></div>';
+}
+        </script>
+        
+    </head>
+    <body>
+        <script>
+            var cookie = getCookie("hasVisited");
+            if (cookie == "true") {
+                homescreen();
+            }
+           else {
+                document.write('<div class="blurred-box"><div class="greeting-box" id="greeting-box"><span"><br><br><br><br>CardView</span><br><br><a onclick="homescreen()">View the Document</a></div>    </div><br><br><br><br><br><br><br><br><br><br>');
+                setCookie("hasVisited", "true", 99999);
+            }
+        </script>
+        
+    <!--Cardview Pages-->
+    <script>
+        //Total amount of pages
+        var totalPages = 144;
+    </script>
+        <!-- Importing the CardView script -->
+        <script src="cardview.js"></script>
+    </body>
+</html>
