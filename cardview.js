@@ -1,5 +1,3 @@
-
-
 setTimeout(() => {
     document.getElementById("cardview-container-loading").remove();
     document.getElementById("svg-loader-container").remove();
