@@ -31,3 +31,16 @@ function updatePicture() {
     }
     document.getElementById("page-label").innerHTML = "Page " + page;
 }
+
+function darkTheme() {
+  document.getElementById("body").style.backgroundColor = "#222";
+  document.getElementById("cardview-menubar").style.backgroundColor = "#222";
+  document.getElementById("cardview-container-loading").style.backgroundColor = "white";
+  document.getElementById("svg-loader-container").style.backgroundColor = "white";
+}
+function lightTheme() {
+  document.getElementById("body").style.backgroundColor = "white";
+  document.getElementById("cardview-menubar").style.backgroundColor = "#FFF";
+  document.getElementById("cardview-container-loading").style.backgroundColor = "white";
+  document.getElementById("svg-loader-container").style.backgroundColor = "white";
+}
